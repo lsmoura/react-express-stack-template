@@ -1,26 +1,21 @@
 import express from 'express';
-import logger from "./logger";
-import expressLogger from "./logger/expressLogger";
+import logger from './logger';
+import expressLogger from './logger/expressLogger';
+import app from './app';
 
 const PORT = process.env.PORT || 3001;
 
-const app = express();
+const expressServer = express();
 
-app.use(expressLogger);
+expressServer.use(expressLogger);
 
 if (process.env.STATIC_FOLDER) {
-  app.use(express.static(process.env.STATIC_FOLDER));
+  expressServer.use(express.static(process.env.STATIC_FOLDER));
 }
 
-const router = express.Router();
+expressServer.use(process.env.API_PREFIX || '/', app);
 
-router.get('/', (req, res) => {
-  res.json({message: 'hello world' });
-});
-
-app.use(process.env.API_PREFIX || '/', router);
-
-const server = app.listen(PORT, () => {
+const server = expressServer.listen(PORT, () => {
   logger.info(`listening on port ${PORT}`);
 });
 
