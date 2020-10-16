@@ -1,10 +1,10 @@
-import {useCallback, useEffect, useState} from "react";
+import { useCallback, useEffect, useState } from 'react';
 
 type IFetchStatus = null | 'loading' | 'finished' | 'error';
 type IUSeFetchReturn<T> = {
-  data: T,
-  state: IFetchStatus,
-  status: number | null,
+  data: T;
+  state: IFetchStatus;
+  status: number | null;
 };
 function useFetch<T = any>(url: string, retry = 0): IUSeFetchReturn<T> {
   const [data, setData] = useState<T>(null);
@@ -42,26 +42,25 @@ function useFetch<T = any>(url: string, retry = 0): IUSeFetchReturn<T> {
         setData(null);
       });
 
-      return () => { cancelled = true; };
+      return () => {
+        cancelled = true;
+      };
     },
-    [setData, setState, setStatus],
+    [setData, setState, setStatus]
   );
 
-  useEffect(
-    () => {
-      if (!url) {
-        setData(null);
-        setState(null);
-        return;
-      }
-
-      setState('loading');
+  useEffect(() => {
+    if (!url) {
       setData(null);
+      setState(null);
+      return;
+    }
 
-      return retrieve(url, retry);
-    },
-    [url, retry]
-  );
+    setState('loading');
+    setData(null);
+
+    return retrieve(url, retry);
+  }, [url, retry]);
 
   return {
     data,

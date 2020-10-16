@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const PRODUCTION = process.env.NODE_ENV === 'production';
 const PORT = process.env.PORT || 3000;
@@ -82,12 +82,13 @@ module.exports = {
     headers: {
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
-      'Access-Control-Allow-Headers': 'X-Requested-With, content-type, Authorization, x-csrf-token',
+      'Access-Control-Allow-Headers':
+        'X-Requested-With, content-type, Authorization, x-csrf-token',
     },
     proxy: {
       '/api': {
         target: 'http://localhost:3001',
-        pathRewrite: {'^/api' : ''},
+        pathRewrite: { '^/api': '' },
       },
     },
   },

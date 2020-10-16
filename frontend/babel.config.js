@@ -1,4 +1,4 @@
-module.exports = api => {
+module.exports = (api) => {
   const DEVELOPMENT = process.env.NODE_ENV === 'development';
   api.cache.using(() => process.env.NODE_ENV);
 

@@ -17,7 +17,9 @@ importers:
       '@typescript-eslint/parser': 4.4.1_eslint@7.11.0+typescript@4.0.3
       dotenv: 8.2.0
       eslint: 7.11.0
+      eslint-config-prettier: 6.13.0_eslint@7.11.0
       nodemon: 2.0.5
+      prettier: 2.1.2
     specifiers:
       '@babel/core': ^7.11.6
       '@babel/node': ^7.10.5
@@ -28,9 +30,11 @@ importers:
       '@typescript-eslint/parser': ^4.4.1
       dotenv: ^8.2.0
       eslint: ^7.11.0
+      eslint-config-prettier: ^6.13.0
       express: ^4.17.1
       express-winston: ^4.0.5
       nodemon: ^2.0.5
+      prettier: ^2.1.2
       typescript: ^4.0.3
       winston: ^3.3.3
   frontend:
@@ -56,6 +60,8 @@ importers:
       '@typescript-eslint/parser': 4.4.1_eslint@7.11.0+typescript@4.0.3
       dotenv: 8.2.0
       eslint: 7.11.0
+      eslint-config-prettier: 6.13.0_eslint@7.11.0
+      prettier: 2.1.2
       webpack-dev-server: 3.11.0_93ca2875a658e9d1552850624e6b91c7
     specifiers:
       '@babel/core': ^7.11.6
@@ -71,7 +77,9 @@ importers:
       core-js: '3'
       dotenv: ^8.2.0
       eslint: ^7.11.0
+      eslint-config-prettier: ^6.13.0
       html-webpack-plugin: ^4.5.0
+      prettier: ^2.1.2
       react: ^16.13.1
       react-dom: ^16.13.1
       regenerator-runtime: ^0.13.7
@@ -2974,6 +2982,16 @@ packages:
       node: '>=0.8.0'
     resolution:
       integrity: sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
+  /eslint-config-prettier/6.13.0_eslint@7.11.0:
+    dependencies:
+      eslint: 7.11.0
+      get-stdin: 6.0.0
+    dev: true
+    hasBin: true
+    peerDependencies:
+      eslint: '>=3.14.1'
+    resolution:
+      integrity: sha512-LcT0i0LSmnzqK2t764pyIt7kKH2AuuqKRTtJTdddWxOiUja9HdG5GXBVF2gmCTvVYWVsTu8J2MhJLVGRh+pj8w==
   /eslint-scope/4.0.3:
     dependencies:
       esrecurse: 4.3.0
@@ -3484,6 +3502,12 @@ packages:
       node: 6.* || 8.* || >= 10.*
     resolution:
       integrity: sha512-DyFP3BM/3YHTQOCUL/w0OZHR0lpKeGrxotcHWcqNEdnltqFwXVfhEBQ94eIo34AfQpo0rGki4cyIiftY06h2Fg==
+  /get-stdin/6.0.0:
+    dev: true
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha512-jp4tHawyV7+fkkSKyvjuLZswblUtz+SQKzSWnBbii16BuZksJlU1wuBYXY75r+duh/llF1ur6oNwi+2ZzjKZ7g==
   /get-stream/4.1.0:
     dependencies:
       pump: 3.0.0
@@ -5193,6 +5217,13 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-6SQ0v6XqjBn0HN/UAddBo8gZ2Jc=
+  /prettier/2.1.2:
+    dev: true
+    engines:
+      node: '>=10.13.0'
+    hasBin: true
+    resolution:
+      integrity: sha512-16c7K+x4qVlJg9rEbXl7HEGmQyZlG4R9AgP+oHKRMsMsuk8s+ATStlf1NpDqyBI1HpVyfjLOeMhH2LvuNvV5Vg==
   /pretty-error/2.1.1:
     dependencies:
       renderkid: 2.0.3

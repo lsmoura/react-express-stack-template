@@ -5,7 +5,4 @@ import App from './app';
 // @ts-ignore
 if (module.hot) module.hot.accept();
 
-ReactDOM.render(
-  <App />,
-  document.querySelector('#root'),
-);
+ReactDOM.render(<App />, document.querySelector('#root'));

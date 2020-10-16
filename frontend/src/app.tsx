@@ -1,5 +1,5 @@
 import React from 'react';
-import useFetch from "./useFetch";
+import useFetch from './useFetch';
 
 const App = (): JSX.Element => {
   const fetchResponse = useFetch<{ message: string }>('/api/', 10000);
@@ -7,7 +7,7 @@ const App = (): JSX.Element => {
   return (
     <div>
       Hello World
-      <div>Message: {JSON.stringify(fetchResponse)}</div>
+      <div>Message: {fetchResponse.data?.message}</div>
     </div>
   );
 };
