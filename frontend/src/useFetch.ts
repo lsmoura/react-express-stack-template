@@ -1,7 +1,12 @@
 import {useCallback, useEffect, useState} from "react";
 
 type IFetchStatus = null | 'loading' | 'finished' | 'error';
-function useFetch<T = any>(url: string, retry: number = 0) {
+type IUSeFetchReturn<T> = {
+  data: T,
+  state: IFetchStatus,
+  status: number | null,
+};
+function useFetch<T = any>(url: string, retry = 0): IUSeFetchReturn<T> {
   const [data, setData] = useState<T>(null);
   const [state, setState] = useState<IFetchStatus>(null);
   const [status, setStatus] = useState<number | null>(null);
@@ -30,9 +35,9 @@ function useFetch<T = any>(url: string, retry: number = 0) {
         setState('finished');
 
         return responseJson;
-      }
+      };
 
-      doFetch().catch(err => {
+      doFetch().catch(() => {
         setState('error');
         setData(null);
       });

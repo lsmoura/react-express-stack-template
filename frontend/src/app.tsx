@@ -1,7 +1,7 @@
 import React from 'react';
 import useFetch from "./useFetch";
 
-const App = () => {
+const App = (): JSX.Element => {
   const fetchResponse = useFetch<{ message: string }>('/api/', 10000);
 
   return (

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "dev": "webpack-dev-server --hot"
+    "dev": "webpack-dev-server --hot",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "author": "",
   "license": "ISC",
@@ -28,7 +29,10 @@
   "devDependencies": {
     "@types/react": "^16.9.52",
     "@types/react-dom": "^16.9.8",
+    "@typescript-eslint/eslint-plugin": "^4.4.1",
+    "@typescript-eslint/parser": "^4.4.1",
     "dotenv": "^8.2.0",
+    "eslint": "^7.11.0",
     "webpack-dev-server": "^3.11.0"
   }
 }
