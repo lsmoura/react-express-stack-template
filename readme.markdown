@@ -28,6 +28,8 @@ environment variable.
 * Some initial bare-bones test setup
 * Production build instructions
 * Server side rendering
+* Better linting rules
+* CI using [danger.systems](https://danger.systems/js/)
 
 ## What this project has no intention to have
 
