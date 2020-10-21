@@ -1,7 +1,9 @@
 {
   "name": "frontend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Frontend for the simple React+Express stack template",
+  "author": "Sergio Moura <sergio@moura.ca>",
+  "license": "ISC",
   "main": "index.js",
   "scripts": {
     "build": "webpack",
@@ -11,8 +13,6 @@
     "prettier": "prettier -c .",
     "prettier:fix": "prettier -w ."
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.11.5",
