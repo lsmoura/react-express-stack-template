@@ -1,4 +1,3 @@
-import React from 'react';
 import useFetch from './useFetch';
 
 const App = (): JSX.Element => {
